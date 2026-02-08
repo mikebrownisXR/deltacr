@@ -1,0 +1,14 @@
+-- SQL schema for DeltaCR users table
+CREATE TABLE IF NOT EXISTS users (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(120) NOT NULL,
+  last_name VARCHAR(120) NOT NULL,
+  dob DATE NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  security_question VARCHAR(255) NOT NULL,
+  security_answer_hash VARCHAR(255) NOT NULL,
+  role VARCHAR(50) NOT NULL DEFAULT 'public',
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  last_login DATETIME DEFAULT NULL
+);
