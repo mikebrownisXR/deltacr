@@ -1,0 +1,32 @@
+/* Minimal responsive styles for DeltaCR */
+:root{--accent:#0b74da;--muted:#666}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.4;color:#222;margin:0}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:#fff;border-bottom:1px solid #eee}
+.brand{font-weight:700}
+.nav a{margin:0 8px;color:var(--muted);text-decoration:none}
+.role-select .btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none}
+.hero{padding:40px 20px;background:linear-gradient(180deg,#f6fbff,#fff);text-align:center}
+.hero-inner{max-width:900px;margin:0 auto}
+.cta a{display:inline-block;margin:10px;padding:12px 18px;border-radius:8px;text-decoration:none}
+.primary{background:var(--accent);color:#fff}
+.secondary{border:1px solid var(--accent);color:var(--accent);background:#fff}
+.features{padding:30px 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.card{padding:12px;border:1px solid #eee;border-radius:8px;background:#fff}
+.site-footer{padding:20px;text-align:center;color:#777;border-top:1px solid #f0f0f0}
+/* forms */
+.form-wrap{max-width:720px;margin:18px auto;padding:18px;border:1px solid #eee;border-radius:8px;background:#fff}
+.form-row{display:flex;gap:12px}
+.form-row .col{flex:1}
+label{display:block;margin-bottom:6px;font-size:13px}
+input[type=text],input[type=email],input[type=password],select,input[type=date]{width:100%;padding:8px;border:1px solid #ccc;border-radius:6px}
+button{background:var(--accent);color:#fff;padding:10px 14px;border:0;border-radius:6px}
+@media(max-width:600px){.form-row{flex-direction:column}}
+
+.notice{padding:10px;background:#fffbeb;border:1px solid #ffe8a1;border-radius:6px;margin-bottom:12px}
+
+/* simple modal */
+.modal{position:fixed;left:0;right:0;top:0;bottom:0;background:rgba(0,0,0,0.4);display:none;align-items:center;justify-content:center}
+.modal .panel{background:#fff;padding:18px;border-radius:8px;max-width:720px;width:90%}
+.show{display:flex}
